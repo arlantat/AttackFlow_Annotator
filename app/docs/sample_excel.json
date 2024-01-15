@@ -1,0 +1,453 @@
+{
+  "type": "bundle",
+  "id": "bundle--aae31c44-d7df-4ca9-b83d-764d9195b365",
+  "spec_version": "2.1",
+  "created": "2024-01-15T15:57:02.872734Z",
+  "modified": "2024-01-15T15:57:02.872734Z",
+  "objects": [
+    {
+      "type": "extension-definition",
+      "id": "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "name": "Attack Flow",
+      "description": "Extends STIX 2.1 with features to create Attack Flows.",
+      "created_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "schema": "https://center-for-threat-informed-defense.github.io/attack-flow/stix/attack-flow-schema-2.0.0.json",
+      "version": "2.0.0",
+      "extension_types": [
+        "new-sdo"
+      ],
+      "external_references": [
+        {
+          "source_name": "Documentation",
+          "description": "Documentation for Attack Flow",
+          "url": "https://center-for-threat-informed-defense.github.io/attack-flow"
+        },
+        {
+          "source_name": "GitHub",
+          "description": "Source code repository for Attack Flow",
+          "url": "https://github.com/center-for-threat-informed-defense/attack-flow"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--f685eafd-6ae2-4685-a0e6-4dcc3ca3b7e5",
+      "spec_version": "2.1",
+      "created": "2023-08-01T19:34:35.143Z",
+      "modified": "2023-08-01T19:34:35.143Z",
+      "created_by_ref": "identity--f685eafd-6ae2-4685-a0e6-4dcc3ca3b7e5",
+      "name": "University of Adelaide Comp Sci Project attackflow_12",
+      "identity_class": "group"
+    },
+    {
+      "type": "attack-flow",
+      "id": "attack-flow--2dbb4b92-6d02-4dbd-ab33-cea2308db28f",
+      "spec_version": "2.1",
+      "created": "2024-01-15T15:57:02.872734Z",
+      "modified": "2024-01-15T15:57:02.872734Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "created_by_ref": "identity--f685eafd-6ae2-4685-a0e6-4dcc3ca3b7e5",
+      "name": "Equifax Breach",
+      "description": "Attack flow on the 2017 Equifax breach.",
+      "scope": "incident",
+      "start_refs": [
+        "attack-action--fbb63cbc-7082-4701-be06-e273b9876d47"
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "id": "threat-actor--62b71130-aaeb-4260-a4a0-dd0596d49266",
+      "spec_version": "2.1",
+      "created": "2024-01-15T15:57:02.872734Z",
+      "modified": "2024-01-15T15:57:02.872734Z",
+      "name": "Wu Zhiyong",
+      "description": "Member of the PLA who was indicted by DoJ for computer fraud, economic espionage, and wire fraud for hacking into credit reporting agency Equifax"
+    },
+    {
+      "type": "threat-actor",
+      "id": "threat-actor--a05d3e67-9ca1-4c71-98d2-2cfd7723710a",
+      "spec_version": "2.1",
+      "created": "2024-01-15T15:57:02.872734Z",
+      "modified": "2024-01-15T15:57:02.872734Z",
+      "name": "Wang Qian",
+      "description": "Member of the PLA who was indicted by DoJ for computer fraud, economic espionage, and wire fraud for hacking into credit reporting agency Equifax"
+    },
+    {
+      "type": "threat-actor",
+      "id": "threat-actor--23ef7afd-a2ee-492f-a4e6-3e00b87a6cad",
+      "spec_version": "2.1",
+      "created": "2024-01-15T15:57:02.872734Z",
+      "modified": "2024-01-15T15:57:02.872734Z",
+      "name": "Xu Ke",
+      "description": "Member of the PLA who was indicted by DoJ for computer fraud, economic espionage, and wire fraud for hacking into credit reporting agency Equifax"
+    },
+    {
+      "type": "threat-actor",
+      "id": "threat-actor--4c966758-6076-4781-be82-9d4ac8a7df86",
+      "spec_version": "2.1",
+      "created": "2024-01-15T15:57:02.872734Z",
+      "modified": "2024-01-15T15:57:02.872734Z",
+      "name": "Liu Lei",
+      "description": "Member of the PLA who was indicted by DoJ for computer fraud, economic espionage, and wire fraud for hacking into credit reporting agency Equifax"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--fbb63cbc-7082-4701-be06-e273b9876d47",
+      "spec_version": "2.1",
+      "created": "2024-01-15T15:57:02.872734Z",
+      "modified": "2024-01-15T15:57:02.872734Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "technique_id": "T1595.002",
+      "name": "Active Scanning: Vulnerability Scanning",
+      "description": "US-CERT warned about a vulnerability within Apache Struts. Attackers searched the web for systems with this vulnerability",
+      "effect_refs": [
+        "attack-condition--2ee0a199-291e-43a6-9ac4-54f6aa63ba4e"
+      ]
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--2ee0a199-291e-43a6-9ac4-54f6aa63ba4e",
+      "spec_version": "2.1",
+      "created": "2024-01-15T15:57:02.872734Z",
+      "modified": "2024-01-15T15:57:02.872734Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "Attackers discovered vulnerable Apache Struts Web Framework on Equifax's dispute portal",
+      "on_true_refs": [
+        "attack-action--14032edb-30c3-4b30-b45f-ab86318fd823"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--14032edb-30c3-4b30-b45f-ab86318fd823",
+      "spec_version": "2.1",
+      "created": "2024-01-15T15:57:02.872734Z",
+      "modified": "2024-01-15T15:57:02.872734Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "technique_id": "T1190",
+      "name": "Exploit Public-Facing Application",
+      "description": "Attackers used software designed to exploit the Apache Struts Web Framework vulnerability to gain access to Equifax's online dispute portal",
+      "effect_refs": [
+        "attack-condition--0eb4e9bc-a326-44d0-bb4a-3c8051b1201f"
+      ]
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--0eb4e9bc-a326-44d0-bb4a-3c8051b1201f",
+      "spec_version": "2.1",
+      "created": "2024-01-15T15:57:02.872734Z",
+      "modified": "2024-01-15T15:57:02.872734Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "Attackers sold foothold into Equifax's network to more experience attackers",
+      "on_true_refs": [
+        "attack-action--36a67fba-559d-478b-a230-253916af6a4d"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--36a67fba-559d-478b-a230-253916af6a4d",
+      "spec_version": "2.1",
+      "created": "2024-01-15T15:57:02.872734Z",
+      "modified": "2024-01-15T15:57:02.872734Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "technique_id": "T1505.003",
+      "name": "Server Software Component: Web Shell",
+      "description": "New attackers exploited foothold and installed web shell onto the Online Dispute Portal",
+      "effect_refs": [
+        "attack-action--1a9b0719-2a60-4e44-9787-40c39af488eb",
+        "attack-action--42a921b5-4ba7-4d50-9285-a433bdda9b44"
+      ],
+      "asset_refs": [
+        "attack-asset--255ddad6-c0c5-44b4-b44a-31340d687f9a"
+      ]
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--255ddad6-c0c5-44b4-b44a-31340d687f9a",
+      "spec_version": "2.1",
+      "created": "2024-01-15T15:57:02.872734Z",
+      "modified": "2024-01-15T15:57:02.872734Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Online Dispute Portal"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--1a9b0719-2a60-4e44-9787-40c39af488eb",
+      "spec_version": "2.1",
+      "created": "2024-01-15T15:57:02.872734Z",
+      "modified": "2024-01-15T15:57:02.872734Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "technique_id": "T1589.001",
+      "name": "Gather Victim Identity Information: Credentials",
+      "description": "Attackers conducted recon on the online dispute portal to obtain valid credentials for database servers",
+      "effect_refs": [
+        "attack-operator--7f5ef66a-3e83-4713-b602-f131c8998b2a"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--42a921b5-4ba7-4d50-9285-a433bdda9b44",
+      "spec_version": "2.1",
+      "created": "2024-01-15T15:57:02.872734Z",
+      "modified": "2024-01-15T15:57:02.872734Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "technique_id": "T1590",
+      "name": "Gather Victim Network Information",
+      "description": "Attackers conducted recon to identify databases with PII",
+      "effect_refs": [
+        "attack-operator--7f5ef66a-3e83-4713-b602-f131c8998b2a"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--7f5ef66a-3e83-4713-b602-f131c8998b2a",
+      "spec_version": "2.1",
+      "created": "2024-01-15T15:57:02.872734Z",
+      "modified": "2024-01-15T15:57:02.872734Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-action--f7791c2c-32f2-4c4e-89d1-2010c12bcee6"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--f7791c2c-32f2-4c4e-89d1-2010c12bcee6",
+      "spec_version": "2.1",
+      "created": "2024-01-15T15:57:02.872734Z",
+      "modified": "2024-01-15T15:57:02.872734Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "technique_id": "T1573",
+      "name": "Encrypted Channel",
+      "description": "Queried databases for PII using existing encrypted channels",
+      "effect_refs": [
+        "attack-condition--deca5d56-6a41-4992-8657-53ebf4cee8d8"
+      ]
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--deca5d56-6a41-4992-8657-53ebf4cee8d8",
+      "spec_version": "2.1",
+      "created": "2024-01-15T15:57:02.872734Z",
+      "modified": "2024-01-15T15:57:02.872734Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "Attackers discovered and compromised databases storing PII",
+      "on_true_refs": [
+        "attack-action--376a7517-49eb-43b0-b5ec-6c52d20597f8",
+        "attack-action--ad95d20a-1f67-44d4-b9f4-0bb54e4b1961"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--ad95d20a-1f67-44d4-b9f4-0bb54e4b1961",
+      "spec_version": "2.1",
+      "created": "2024-01-15T15:57:02.872734Z",
+      "modified": "2024-01-15T15:57:02.872734Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "technique_id": "T1560",
+      "name": "Archive Collected Data",
+      "description": "split and compress output files with information",
+      "effect_refs": [
+        "attack-operator--e00a1ab5-eb03-4e79-8378-0242fd9229be"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--376a7517-49eb-43b0-b5ec-6c52d20597f8",
+      "spec_version": "2.1",
+      "created": "2024-01-15T15:57:02.872734Z",
+      "modified": "2024-01-15T15:57:02.872734Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "technique_id": "T1140",
+      "name": "Deobfuscate/Decode Files or Information",
+      "description": "split and compress output files with information - obfuscate PII information",
+      "effect_refs": [
+        "attack-operator--e00a1ab5-eb03-4e79-8378-0242fd9229be"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--e00a1ab5-eb03-4e79-8378-0242fd9229be",
+      "spec_version": "2.1",
+      "created": "2024-01-15T15:57:02.872734Z",
+      "modified": "2024-01-15T15:57:02.872734Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-action--afc82815-9027-400d-b334-c0ffe9964964"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--afc82815-9027-400d-b334-c0ffe9964964",
+      "spec_version": "2.1",
+      "created": "2024-01-15T15:57:02.872734Z",
+      "modified": "2024-01-15T15:57:02.872734Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "technique_id": "T1048.002",
+      "name": "Exfiltration Over Alternative Protocol: Exfiltration Over Asymmetric Encrypted Non-C2 Protocol",
+      "description": "Exfiltration over standard encrypted web protocols to disguise the exchanges as normal network traffic",
+      "effect_refs": [
+        "attack-action--2efe4b8a-f0a5-4c42-8cda-534d87b23f5a"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--2efe4b8a-f0a5-4c42-8cda-534d87b23f5a",
+      "spec_version": "2.1",
+      "created": "2024-01-15T15:57:02.872734Z",
+      "modified": "2024-01-15T15:57:02.872734Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "technique_id": "T1090.003",
+      "name": "Proxy: Multi-hop Proxy",
+      "description": "attackers used multi-hop proxies in approximately thirty-four servers located in nearly twenty countries",
+      "effect_refs": [
+        "attack-action--aa9ec765-2350-4ce6-9bb8-d5acfd4b5221",
+        "attack-action--db8f8ff0-f93d-4de6-a11c-49bee23cf0af"
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--601228ae-d62c-4c1f-ae46-4497df1ff7ad",
+      "spec_version": "2.1",
+      "created": "2024-01-15T15:57:02.872734Z",
+      "modified": "2024-01-15T15:57:02.872734Z",
+      "name": "Proxies",
+      "description": "Adversary used multi-hop proxies"
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--2d9d7de7-e0a0-448f-850e-59bf4da5f0ff",
+      "spec_version": "2.1",
+      "created": "2024-01-15T15:57:02.872734Z",
+      "modified": "2024-01-15T15:57:02.872734Z",
+      "name": "Servers",
+      "description": "Adversary used 34 servers located in nearly 20 countries to host multi-hop proxies for obfuscation"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--db8f8ff0-f93d-4de6-a11c-49bee23cf0af",
+      "spec_version": "2.1",
+      "created": "2024-01-15T15:57:02.872734Z",
+      "modified": "2024-01-15T15:57:02.872734Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "technique_id": "T1070.004",
+      "name": "Indicator Removal on Host: File Deletion",
+      "description": "deleted the compressed files after exfiltrating the sensitive data"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--aa9ec765-2350-4ce6-9bb8-d5acfd4b5221",
+      "spec_version": "2.1",
+      "created": "2024-01-15T15:57:02.872734Z",
+      "modified": "2024-01-15T15:57:02.872734Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "technique_id": "T1070.001",
+      "name": "Indicator Removal on Host: Clear Windows Event Logs",
+      "description": "wiped log files on a daily basis in an effort to eliminate records of activity"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--d930de19-699d-4cbf-83d4-7cadd61a08b5",
+      "spec_version": "2.1",
+      "created": "2024-01-15T15:57:02.872734Z",
+      "modified": "2024-01-15T15:57:02.872734Z",
+      "name": "Apache Struts"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--85424107-e3a7-4750-8bf2-06d13c279c78",
+      "spec_version": "2.1",
+      "created": "2024-01-15T15:57:02.872734Z",
+      "modified": "2024-01-15T15:57:02.872734Z",
+      "name": "Apache Struts Web Framework"
+    },
+    {
+      "type": "malware",
+      "id": "malware--4e7562d5-dae2-4fc3-b533-960418a09568",
+      "spec_version": "2.1",
+      "created": "2024-01-15T15:57:02.872734Z",
+      "modified": "2024-01-15T15:57:02.872734Z",
+      "is_family": false,
+      "name": "Web Shell"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+    <title>Project Home</title>
+</head>
+<body>
+<header>
+    <h1>Project Dashboard</h1>
+</header>
+<main>
+    <section>
+        <h2>User Information</h2>
+        <p>{{ user_info }}</p>
+    </section>
+    <nav>
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="{{ url_for('upload_file') }}">Upload File</a></li>
+            <li><a href="{{ url_for('open_attack_flow') }}" target="_blank">Open Attack Flow Visualizer</a></li>
+        </ul>
+    </nav>
+</main>
+</body>
+</html>

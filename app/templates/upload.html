@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    
+    
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.worker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+    
+    <!-- Upload js -->
+    <script src="{{ url_for('static', filename='js/upload.js') }}"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header & Navigation -->
+        <header>
+            <h1>Upload a Document</h1>
+            
+            <!-- DEBUGGING CLEAR ALL DATABASE -->
+            <button style="background-color: red; color: white; font-weight: bold;" onclick="clearDatabase()">Clear Database</button>
+            <button style="background-color: red; color: white; font-weight: bold;" id="clearBtn" value="Clear">Clear all text</button>
+            <div id="clearStatus"></div>
+            <!-- DEBUGGING CLEAR ALL DATABASE -->
+            
+            <li><a href="{{ url_for('index') }}">Back to home</a></li>
+            <li><a href="{{ url_for('open_attack_flow') }}" target="_blank">Open Attack Flow Visualizer</a></li>
+        </header>
+               
+        <!-- Save File Section -->
+        <section>
+            <form method="post" enctype="multipart/form-data" onsubmit="return createProject(event);">
+                <div class="form-group">
+                    <label for="projectname">Create project:</label>
+                    <input type="text" name="projectname" id="projectname" placeholder="Enter Project name" required>
+                    <label for="initialfile">Upload initial document:</label>
+                    <input type="file" name="initialfile" id="initialfile" required>
+                    <input type="submit" value="Create Project" id="createProjectBtn">
+                    <span id="projectCreationMessage"></span>
+                </div>
+            </form>
+            
+        <!-- List of Projects -->
+        <div class="project-section">
+            <!-- List of Projects -->
+            <div class="project-list">
+                <details id="projectsDetails">
+                    <summary>Show All Projects</summary>
+                    <ul id="projectList">
+                        <!-- Projects will be populated here dynamically -->
+                    </ul>
+                </details>
+            </div>
+        
+            <!-- List of versions -->
+            <div class="version-list">
+                <details id="versionsDetails">
+                    <summary>Versions</summary>
+                    <ul id="versionList"></ul>
+                </details>
+            </div>
+
+            <!-- Annotation Dropdown -->
+            <div id="annotationControls" style="display: none;">
+                <select id="annotationDropdown">
+                    <!-- Options will be added dynamically -->
+                </select>
+                <button onclick="addAnnotation()">Add Annotation</button>
+            </div>
+
+        </div>
+        
+
+                <div id="actionButtons" style="display: none;">
+                    <input type="button" value="Annotate current version" id="annotate">
+                    <!-- <input type="button" value="Update" id="updatebutton"> -->
+                </div>
+            </details>
+
+
+        </section>
+
+
+        
+        <!-- Display & Annotation Section -->
+        <section>
+            <!-- Display the current session info for testing -->
+            <pre id="sessionInfoDisplay"></pre>
+
+            
+
+
+            <div class="pdf-wrapper">
+                <!-- Display PDF or Doc -->
+                <div class="pdf-container" id="pdf-pages">
+                    <h2>View Container</h2>
+                </div>
+                <!-- Annotation Section -->
+                <div class="pdf-container" id="html-pages" contenteditable="true">
+                    <h2>Annotate Container</h2>
+                </div>
+                <div id="annotationsContainer">
+                    <!-- Annotations will be populated here dynamically -->
+                </div>
+                
+            </div>
+        </section>
+        
+
+</body>
+</html>

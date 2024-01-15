@@ -1,0 +1,135 @@
+/* Styles for the document containes*/
+.pdf-wrapper {
+    display: flex;
+    justify-content: space-between; 
+}
+
+.pdf-container {
+    width: 40%;
+    height: 520px; 
+    overflow: auto;
+    border: 1px solid #ddd;
+    padding: 10px; 
+}
+
+/* Styles for the project list & version list */
+.project-section {
+    display: flex;
+}
+
+.project-list, .version-list {
+    flex: 1; 
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.project-list {
+    max-width: 200px; 
+    border: 1px solid #ccc; 
+    overflow-y: auto; 
+}
+
+.version-list {
+    display: flex; 
+    border: 1px solid #ccc;
+    overflow-y: auto; 
+}
+
+/* Styles for the annotation container */
+
+.highlighted-text {
+    background-color: yellow;
+    cursor: help;
+    position: relative;
+}
+
+
+.highlighted-text:hover::after {
+    content: attr(data-tag);
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    transform: translateY(-5px);
+    z-index: 1;
+}
+
+
+#annotationsContainer {
+    border: 1px solid #ccc;
+    padding: 10px;
+    height: 520px;
+    overflow-y: auto;
+    width: 30%;
+    display: none;
+}
+
+.annotation-headers, 
+.annotation {
+    display: flex;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Set up column headers */
+.annotation-headers div, 
+.annotation div {
+    padding-right: 20px;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+/* Set widths for simplicity */
+.annotation-headers .tag-id, 
+.annotation .tag-id {
+    width: 50px;  
+}
+
+.annotation-headers .tag-name, 
+.annotation .tag-name {
+    width: 150px;  
+}
+
+.annotation-headers .related-tags, 
+.annotation .related-tags {
+    flex-grow: 1; 
+    overflow-x: auto;
+}
+
+
+.annotation button {
+    margin-left: 10px;
+}
+
+
+/* buttons */
+#deleteButton {
+    background-color: red;
+    border: none;
+    color: white;
+    font-size: 14px;
+}
+
+#deleteButton:hover {
+    background-color: darkred;
+}
+
+/* session info for testing */
+#sessionInfoDisplay {
+    position: fixed;
+    top: 2px;
+    right: 10px;
+    background-color: rgba(233, 205, 205, 0.9);
+    padding: 5px;
+    border: 1px solid #ca3d3d;
+    border-radius: 5px;
+    max-width: 500px;
+    overflow-y: auto;
+    z-index: 1000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+}

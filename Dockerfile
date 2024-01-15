@@ -25,10 +25,10 @@ RUN pip install poetry
 WORKDIR /app
 
 # Copy the necessary parts of your app into the container
-COPY ./app/src/attack_flow /app/src/attack_flow
+COPY venv/app/src/attack_flow /app/src/attack_flow
 
 # Copy pyproject.toml and poetry.lock from /app into the working directory
-COPY ./app/pyproject.toml ./app/poetry.lock* /app/
+COPY venv/app/pyproject.toml ./app/poetry.lock* /app/
 
 RUN poetry config virtualenvs.create false
 RUN poetry install --no-interaction
