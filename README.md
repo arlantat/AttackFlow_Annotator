@@ -1,5 +1,12 @@
 # attackflow_12
 
+This is a joint project for my degree's capstone course. Meant to be a web application that aids [the main repository](https://github.com/center-for-threat-informed-defense/attack-flow) in annotating attack vectors. Shout out to Dan Wooldridge, the first person who contributed more than myself in any university programming projects I've done.
+
+### My Main Contributions:
+
+- Mapping user-typed information (in the form of excel sheets) to the correct JSON format that adheres to AttackFlow specifications with `app/models/annotation.py`.
+- Visualise the resulting JSON files using existing tools with `app/models/visualise.py`.
+
 ## Set Up Docker
 
 __Windows users will need to:__
