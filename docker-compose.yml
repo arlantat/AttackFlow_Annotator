@@ -1,0 +1,31 @@
+version: '3.4'
+
+services:
+  web:
+    build: .
+    volumes:
+      - ./app:/app  # Bind the app directory for live code changes
+    ports:
+      - "5002:5002"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/projectDb
+    depends_on:
+      - mongo
+    command: ["/bin/bash", "-c", "tail -f /dev/null"]
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodata:/data/db
+      - ./app/mongo-init-scripts/init-db.js:/docker-entrypoint-initdb.d/init-db.js
+  attack-flow:
+    build:
+      context: ./attack-flow-main
+      dockerfile: ./Dockerfile  # point this to the AFV Dockerfile location
+    ports:
+      - 8080:80
+    restart: always
+volumes:
+  mongodata:
