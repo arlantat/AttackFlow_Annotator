@@ -1,6 +1,6 @@
 # attackflow_12
 
-This is a joint project for my degree's capstone course. Meant to be a web application that aids [the main repository](https://github.com/center-for-threat-informed-defense/attack-flow) in annotating attack vectors. Shout out to Dan Wooldridge, the first person who contributed more than myself in any university programming projects I've done.
+This is a joint project for my degree's capstone course. Meant to be a web application that aids [the main repository](https://github.com/center-for-threat-informed-defense/attack-flow) in annotating attack vectors.
 
 ### My Main Contributions:
 
